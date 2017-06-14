@@ -1,15 +1,15 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Saturn by @flamekaizar</title>
+    <title>Cari Cesarotti</title>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content="Saturn is free PSD &amp; HTML template by @flamekaizar">
-    <meta name="author" content="Afnizar Nur Ghifari">
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="description" content="Cari Cesarotti's personal website">
+    <meta name="author" content="Cari Cesarotti">
+    <!-- <meta name="viewport" content="width=device-width, initial-scale=1" /> -->
     <link rel="stylesheet" href="css/kube.min.css" />
     <link rel="stylesheet" href="css/font-awesome.min.css" />
-    <link rel="stylesheet" href="css/custom.min.css" />
+    <link rel="stylesheet" href="css/custom.css" />
     <link rel="shortcut icon" href="img/favicon.png" />
     <link href="http://fonts.googleapis.com/css?family=Lato:400,700" rel="stylesheet" type="text/css">
     <link href="http://fonts.googleapis.com/css?family=Open+Sans:400,700" rel="stylesheet" type="text/css">
@@ -20,11 +20,14 @@
 		<div class="container">
 			<header class="group top-nav">
 				<nav class="navbar logo-w navbar-left" >
-					<a class="logo" href="index.html">Saturn</a>
+				<ul>
+					<li><a class="logo" href="index.html">Cari Cesarotti</a></li>
+					<li><a href="mailto:ccesarotti@g.harvard.edu">ccesarotti@g.harvard.edu</a></li>
+				</ul>
 				</nav>
-				<div class="navigation-toggle" data-tools="navigation-toggle" data-target="#navbar-1">
+				<!-- <div class="navigation-toggle" data-tools="navigation-toggle" data-target="#navbar-1">
 				    <span class="logo">Saturn</span>
-				</div>
+				</div> -->
 			    <nav id="navbar-1" class="navbar item-nav navbar-right">
 				    <ul>
 				        <li class="active"><a href="index.html">Home</a></li>
@@ -42,13 +45,17 @@
 		<div class="container">
 			<div class="units-row">
 			    <div class="unit-10">
-			    	<img class="img-intro" src="img/avatar.png" alt="">
+			    	<img class="img-intro" src="img/avatar.jpeg" alt="">
 			    </div>
 			    <div class="unit-90">
-			    	<p class="p-intro">Hello, I’m Saturn. I’m proud to be a part of milky way.</p>
+			    	<p class="p-intro">Hello, I’m Cari, a grad student in phenomenology at Harvard University.</p>
 			    </div>
 			</div>
 		</div>
+	</div>
+
+	<div id="togglebox-target" class="hide">
+    test
 	</div>
 
 	<!-- Content -->
@@ -57,21 +64,41 @@
 			<!-- Post -->
 			<div class="post">
 				<!-- Heading -->
-				<a href="#"><h1>Galaxy is on your hand</h1></a>
+				<a href="#"><h1>CERN 2 : Kaon physics</h1></a>
 				<hr>
 				<div class="in-content">
 					<p>
-						Saturn has a prominent ring system that consists of nine continuous main rings and three discontinuous arcs, composed mostly of ice particles with a smaller amount of rocky debris and dust. Sixty-two known moons orbit the planet, of which fifty-three are officially named. This does not include the hundreds of "moonlets" comprising the rings.
+						Some of the work I've been doing in the past few weeks is related to studying the production and kinematics of kaons.
+
+The beam of the kaons is produced by colliding high momentum protons into a beryllium target, then a series of beams and collimators leave a 75 GeV/c momentum K+ beam. Those K+ can interact with materials in the experiment, such as some of the many collimators or sub detectors, and produce
+\[ K^+ n \rightarrow K^0 p^+ \].
+$K^0$ and their antiparticles form a different set of eigenstates that we observe. We instead measure superpositions of $K^0$ and $\bar{K^0}$ called K-short ($K^0_S$) and K-long ($K^0_L$). They are called this as the K-short has an incredibly short life time, whereas the K-long has on the order of 100x longer lifetime before decaying.
+
 					</p>
-					<a class="read-more" href="#">Read more</a>
+					<button class="read-more" data-component="toggleme" data-target="togglebox-target" data-text="Show less">Read more</button>
+
+					<div id="togglebox-target2" class="togglebox-box hide"><p>
+The danger of these backgrounds is that they might decay in the region of the detector that measure signal. The K-longs are generally sufficiently boosted (traveling fast enough to slow their proper time) to not decay in the accepted region, but the K-shorts should provide a large number of accepted events.
+
+We can find and reconstruct these particles by their daughter particles after decay. The primary branching ratio for K-short is
+\[ K^0_S \rightarrow \pi^+ \pi ^- \]
+so we look for two oppositely charged tracks in the acceptance of the spectrometer. The spectrometer can tell us position, charge, and momentum. Therefore if we find a positively and negative charged entry in time coincidence, we can reconstruct their tracks to see if the form a common vertex. From their four momenta, we can calculate the invariant mass of the two particles. If it is near .497 GeV, there is a good chance this was a K-short.
+
+There are a couple of subtleties here. First off is determining time coincidence. There are errors on timing in the detector that could lead to faulty or missed correlations. The acceptance of the detector is also limited. If one of the pions misses the spectrometer, we lose the ability to do a two track reconstruction. Track reconstruction, however, is the most difficult thing to do well. If we require that the a vertex is only formed if the tracks come within millimeters of each other, this requires remarkable precision.
+
+Track reconstruction can be simple; assuming a linear track and extrapolating geometrically does a pretty good job. Another tool that I've been using is a least squares fitting (LSF) tool that was created for a different track fitting study. So far, it would seem that the LSF does a better job of reconstructing the track as it accounts for magnets bending charged tracks along the beam line.
+
+Ultimately we want to be able to find the momentum spread and production point of these kaons so that we can cut this background out of our potential signal.
+</p></div>
+					<!-- <a class="read-more" href="#">Read more</a> -->
 				</div>
 				<div class="foot-post">
 					<div class="units-row">
 					    <div class="unit-100">
 					    	<strong>Tags:</strong>
-					    	<a href="#">Galaxy</a>,
-					    	<a href="#">Human</a>,
-					    	<a href="#">World</a>,
+					    	<a href="#">CERN</a>,
+					    	<a href="#">KAON</a>,
+					    	<a href="#">TRACK RECONSTRUCTION</a>,
 					    </div>
 					    <div class="unit-100">
 					    	<strong>COMMENTS:</strong>
