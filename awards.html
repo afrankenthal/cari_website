@@ -4,7 +4,7 @@
     <title>Cari Cesarotti</title>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content="About Cari">
+    <meta name="description" content="Archive">
     <meta name="author" content="Cari Cesarotti">
     <!-- <meta name="viewport" content="width=device-width, initial-scale=1" /> -->
     <link rel="stylesheet" href="css/kube.min.css" />
@@ -13,6 +13,12 @@
     <link rel="shortcut icon" href="img/favicon.png" />
     <link href="http://fonts.googleapis.com/css?family=Lato:400,700" rel="stylesheet" type="text/css">
     <link href="http://fonts.googleapis.com/css?family=Open+Sans:400,700" rel="stylesheet" type="text/css">
+    <script type="text/x-mathjax-config">
+        MathJax.Hub.Config({tex2jax: {inlineMath: [['$','$'], ['\\(','\\)']]}});
+    </script>
+    <script type="text/javascript" async
+        src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-MML-AM_CHTML">
+    </script>
 </head>
 
 <body>
@@ -33,8 +39,8 @@
                 <nav id="navbar-1" class="navbar item-nav navbar-right">
                     <ul>
                         <li><a href="index.html">Home</a></li>
-                        <li class="active"><a href="#">About</a></li>
-                        <li><a href="awards.html">Awards</a></li>
+                        <li><a href="about.html">About</a></li>
+                        <li class="active"><a href="#">Awards</a></li>
                         <li><a href="archive.html">Archive</a></li>
                         <li><a href="contact.html">Contact</a></li>
                     </ul>
@@ -43,31 +49,24 @@
         </div>
     </div>
 
-    <div>
+    <h2 class="text-centered" style='font-family: "Open Sans", sans-serif; padding-top: 30px;'>Awards </h2>
+
+    <div class="content">
+        <div class="container">
+
+    <ul>
+        <li>Theodore H. Ashford Fellowship for the Sciences (2017)</li>
+        <li>James Mills Peirce Fellowship (2017)</li>
+        <li>Mainz PRISMA Cluster of Excellence Scholarship (Jan 2017)</li>
+        <li>Bachelor of Arts in Physics, Summa Cum Laude (Jan 2017)</li>
+        <li>Kieval Prize in Physics for Outstanding Senior (2017)</li>
+        <li>Phi Beta Kappa Honors Society (2016)</li>
+        <li>Hunter R. Rawlings III Cornell Presidential Research Scholars</li>
+        <li>Dean's List (All Semesters)</li>
+    </ul>
 
     </div>
-
-    <div class="container" style="padding-top: 50px;">
-        <div class="units-row">
-            <div class="unit-40">
-                <img class="img-about" src="img/cari.jpg" alt="" style="border-style: solid; border-color: red;">
-            </div>
-            <div class="unit-60">
-                <p> I have known since a very young age that I wanted to be a particle physicist. I started my undergrad at Cornell University in 2013. There, my studies focused on experimental and theoretical particle physics, with research in the realm of hidden sector searches. Since the beginning of 2014, I was working with Professor Jim Alexander on a proposed dark matter experiment to take place at Wilson Lab called 'Missing Mass A-Prime Search' (MMAPS).  In addition to Alexander I worked with Prof. Maxim Perelstein, Prof. Peter Wittich, and Prof. David Rubin for the entirety of my time at Cornell. During the summer of 2016, I joined the NA62 experiment through the University of Michigan REU program. There I worked with Dr. Babette Doebrich and Dr. Tommaso Spadaro on exotic particle searches. After returning from this REU, I graduated a semester early in December in anticipation of spending the last 6 months before grad school researching. </p>
-
-                <p> After completing undergrad, I was invited to return to NA62, funded by JG Mainz University, for six months in the beginning of 2017. My research focused again on exotic particle searches in both experiment and theory.  </p>
-
-                <p> My PhD research will be at Harvard University, in anticipation of studying with Matt Reece. I will be working in phenomenology, looking into a variety of flaws and possibilities for the standard model.</p>
-
-                <p> You can find my complete CV/ resume <a href="#"> here </a> </p>
-
-
-
-
-            </div>
-        </div>
     </div>
-
 
     <footer class="foot-cp">
         <div class="container">
@@ -92,5 +91,7 @@
     <!-- Javascript -->
     <script src="js/jquery.min.js"></script>
     <script src="js/kube.min.js"></script>
+    <script src="js/custom.js"></script>
+
 </body>
 </html>
