@@ -111,6 +111,18 @@ img.img-intro {
 	-moz-animation: smooth-entry-btn 1s;
 	animation: smooth-entry-btn 1s;
 }
+img.img-about {
+    border-radius: 10px;
+    width: 470px;
+    background-color: #EF3A3A;
+    border: 1px solid #DC5227;
+    -moz-box-shadow: inset 0.5px 0.9px 5px rgba(0, 0, 0, 0.05);
+    -webkit-box-shadow: inset 0.5px 0.9px 5px rgba(0, 0, 0, 0.05);
+    box-shadow: inset 0.5px 0.9px 5px rgba(0, 0, 0, 0.05);
+    /*-webkit-animation: smooth-entry-btn 1s;
+    -moz-animation: smooth-entry-btn 1s;
+    animation: smooth-entry-btn 1s;*/
+}
 .content { padding-top: 75px }
 .post { margin-bottom: 80px }
 .content .post a { text-decoration: none }
@@ -179,6 +191,16 @@ button.read-more {
     text-transform: uppercase;
     text-decoration: none;
     letter-spacing: 2px;
+}
+
+button.read-more:hover {
+    background-color: #FF6C40;
+    color: #fff;
+    -webkit-transition: all .25s ease-in-out;
+       -moz-transition: all .25s ease-in-out;
+        -ms-transition: all .25s ease-in-out;
+         -o-transition: all .25s ease-in-out;
+            transition: all .25s ease-in-out;
 }
 
 a.read-more:hover {

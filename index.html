@@ -13,6 +13,12 @@
     <link rel="shortcut icon" href="img/favicon.png" />
     <link href="http://fonts.googleapis.com/css?family=Lato:400,700" rel="stylesheet" type="text/css">
     <link href="http://fonts.googleapis.com/css?family=Open+Sans:400,700" rel="stylesheet" type="text/css">
+    <script type="text/x-mathjax-config">
+		MathJax.Hub.Config({tex2jax: {inlineMath: [['$','$'], ['\\(','\\)']]}});
+	</script>
+    <script type="text/javascript" async
+		src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-MML-AM_CHTML">
+	</script>
 </head>
 <body>
 	<!-- Navigation -->
@@ -30,10 +36,10 @@
 				</div> -->
 			    <nav id="navbar-1" class="navbar item-nav navbar-right">
 				    <ul>
-				        <li class="active"><a href="index.html">Home</a></li>
-				        <li><a href="#">About</a></li>
-				        <li><a href="#">Archive</a></li>
-				        <li><a href="#">Contact</a></li>
+				        <li class="active"><a href="#">Home</a></li>
+				        <li><a href="about.html">About</a></li>
+				        <li><a href="archive.html">Archive</a></li>
+				        <li><a href="contact.html">Contact</a></li>
 				    </ul>
 				</nav>
 			</header>
@@ -54,10 +60,6 @@
 		</div>
 	</div>
 
-	<div id="togglebox-target" class="hide">
-    test
-	</div>
-
 	<!-- Content -->
 	<div class="content">
 		<div class="container">
@@ -70,29 +72,37 @@
 					<p>
 						Some of the work I've been doing in the past few weeks is related to studying the production and kinematics of kaons.
 
-The beam of the kaons is produced by colliding high momentum protons into a beryllium target, then a series of beams and collimators leave a 75 GeV/c momentum K+ beam. Those K+ can interact with materials in the experiment, such as some of the many collimators or sub detectors, and produce
-\[ K^+ n \rightarrow K^0 p^+ \].
-$K^0$ and their antiparticles form a different set of eigenstates that we observe. We instead measure superpositions of $K^0$ and $\bar{K^0}$ called K-short ($K^0_S$) and K-long ($K^0_L$). They are called this as the K-short has an incredibly short life time, whereas the K-long has on the order of 100x longer lifetime before decaying.
+						The beam of the kaons is produced by colliding high momentum protons into a beryllium target, then a series of beams and collimators leave a 75 GeV/c momentum K+ beam. Those K+ can interact with materials in the experiment, such as some of the many collimators or sub detectors, and produce
+
+							\[ K^+ n \rightarrow K^0 p^+ .\]
+
+						$K^0$ and their antiparticles form a different set of eigenstates that we observe. We instead measure superpositions of $K^0$ and $\bar{K^0}$ called K-short ($K^0_S$) and K-long ($K^0_L$). They are called this as the K-short has an incredibly short life time, whereas the K-long has on the order of 100x longer lifetime before decaying.
 
 					</p>
-					<button class="read-more" data-component="toggleme" data-target="togglebox-target" data-text="Show less">Read more</button>
 
-					<div id="togglebox-target2" class="togglebox-box hide"><p>
-The danger of these backgrounds is that they might decay in the region of the detector that measure signal. The K-longs are generally sufficiently boosted (traveling fast enough to slow their proper time) to not decay in the accepted region, but the K-shorts should provide a large number of accepted events.
+					<div id="moretext_1" style="display: none">
 
-We can find and reconstruct these particles by their daughter particles after decay. The primary branching ratio for K-short is
-\[ K^0_S \rightarrow \pi^+ \pi ^- \]
-so we look for two oppositely charged tracks in the acceptance of the spectrometer. The spectrometer can tell us position, charge, and momentum. Therefore if we find a positively and negative charged entry in time coincidence, we can reconstruct their tracks to see if the form a common vertex. From their four momenta, we can calculate the invariant mass of the two particles. If it is near .497 GeV, there is a good chance this was a K-short.
 
-There are a couple of subtleties here. First off is determining time coincidence. There are errors on timing in the detector that could lead to faulty or missed correlations. The acceptance of the detector is also limited. If one of the pions misses the spectrometer, we lose the ability to do a two track reconstruction. Track reconstruction, however, is the most difficult thing to do well. If we require that the a vertex is only formed if the tracks come within millimeters of each other, this requires remarkable precision.
+					<p>The danger of these backgrounds is that they might decay in the region of the detector that measure signal. The K-longs are generally sufficiently boosted (traveling fast enough to slow their proper time) to not decay in the accepted region, but the K-shorts should provide a large number of accepted events.</p>
 
-Track reconstruction can be simple; assuming a linear track and extrapolating geometrically does a pretty good job. Another tool that I've been using is a least squares fitting (LSF) tool that was created for a different track fitting study. So far, it would seem that the LSF does a better job of reconstructing the track as it accounts for magnets bending charged tracks along the beam line.
+					<p>We can find and reconstruct these particles by their daughter particles after decay. The primary branching ratio for K-short is
 
-Ultimately we want to be able to find the momentum spread and production point of these kaons so that we can cut this background out of our potential signal.
-</p></div>
-					<!-- <a class="read-more" href="#">Read more</a> -->
+					\[ K^0_S \rightarrow \pi^+ \pi ^- \]
+
+					so we look for two oppositely charged tracks in the acceptance of the spectrometer. The spectrometer can tell us position, charge, and momentum. Therefore if we find a positively and negative charged entry in time coincidence, we can reconstruct their tracks to see if the form a common vertex. From their four momenta, we can calculate the invariant mass of the two particles. If it is near .497 GeV, there is a good chance this was a K-short.</p>
+
+					<p>There are a couple of subtleties here. First off is determining time coincidence. There are errors on timing in the detector that could lead to faulty or missed correlations. The acceptance of the detector is also limited. If one of the pions misses the spectrometer, we lose the ability to do a two track reconstruction. Track reconstruction, however, is the most difficult thing to do well. If we require that the a vertex is only formed if the tracks come within millimeters of each other, this requires remarkable precision.</p>
+
+					<p>Track reconstruction can be simple; assuming a linear track and extrapolating geometrically does a pretty good job. Another tool that I've been using is a least squares fitting (LSF) tool that was created for a different track fitting study. So far, it would seem that the LSF does a better job of reconstructing the track as it accounts for magnets bending charged tracks along the beam line.</p>
+
+					<p>Ultimately we want to be able to find the momentum spread and production point of these kaons so that we can cut this background out of our potential signal.</p>
+
+					</div>
+
+					<button id="readmore_1" class="read-more">Read more</button>
+
 				</div>
-				<div class="foot-post">
+				<!-- <div class="foot-post">
 					<div class="units-row">
 					    <div class="unit-100">
 					    	<strong>Tags:</strong>
@@ -105,22 +115,47 @@ Ultimately we want to be able to find the momentum spread and production point o
 					    	<a href="#">3</a>
 					    </div>
 					</div>
-				</div>
+				</div> -->
 			</div>
 			<!-- /post -->
 
 			<!-- Post -->
 			<div class="post">
 				<!-- Heading -->
-				<a href="#"><h1>The moon will pass above or below Saturn in the sky</h1></a>
+				<a href="#"><h1>NA62 & Hidden Sector Searches</h1></a>
 				<hr>
 				<div class="in-content">
-					<img class="right" src="img/post-img.jpg" alt="">
+
+
+					<!-- <img class="right" src="img/post-img.jpg" alt=""> -->
 					<p>
-						Saturn has a prominent ring system that consists of nine continuous main rings and three discontinuous arcs, composed mostly afn of ice particles with a smaller amount of rocky debris and dust.
+
+					These past few weeks I have been at CERN, working with some new collaborators on the NA62 experiment. NA62 is a rare kaon decay experiment that uses beam from the SPS (super proton synchrotron). The SPS produces protons with 400 GeV (nearly 400x its rest mass) of momentum, which are then collided with a beryllium target to produce K+ (kaons). K+ is a meson, or a bound state of two quarks, with a rest mass of around .5 GeV. Magnets are used to veto most of the produced K+'s and leave only those with about 75 GeV in momentum to carry on to the detectors. Ultimately, NA62 is trying to measure the branching ratio for $K+ \rightarrow \pi^+ \nu \bar{\nu}$. This process isn't allowed at tree level, so it is greatly suppressed. Previous estimates had an error bar on the same order of the estimate, rendering it worthless. NA62 aims to measure the BR with accuracy of up to 10%.
+
 					</p>
+
+
+					<div id="moretext_2" style="display: none">
+
+					<p>This kind of experiment is interesting in a couple of ways. We are always looking for confirmations or finer measurements on the Standard Model (SM) which could be used alone to explain this process. However, it is more fine to find corrections that don't agree with theory...things we need to look extremely close to find. Because of the precision necessary for this experiment, it is extremely well instrumented to veto and account for all other possible particles produced in the beam or the sub detectors.</p>
+
+					<p>That being said, we can do some really fun stuff with it. My collaborator Babette Döbrich is hoping to find some Axion Like Particles (ALPs), and my other collaborator Tommaso Spadaro is looking for a dark photon. The ALP would mix with SM particles via diphoton fusion and decay, i.e. it can be produced by two photons, and it can decay into two photons. The dark photon, unlike the experiment MMAPS is aiming for at Cornell, would be detected via dilepton decay (i.e. dark photon to muon anti-muon). The available beam energy and the extensive veto/ triggering system already in place for this system makes the hidden sector search a clever extension of what already is in place.</p>
+
+					<p>My job, it would seem, is to help. While I was expecting to be given some code-monkey job and one-way ticket to physics summer camp when accepted into this program, meeting Babette and Tommaso quickly change my opinion of the work I would be doing. The best way I can describe it is we work together. The three of us talk  all the time, discuss what we've found, and sometimes we all jump onto the same project and sometimes we abandon it in full. We all bring something to the table it would seem: Babette, the theorist-turned-experimentalist, Tommaso, the experimentalist-with-experience, and me, the dark-photon-dreamer and Geant4 king do a not bad job of figuring out the next interesting steps for our dark matter search.</p>
+
+					<p>The current outline is as follows. We have data, but have not seen signal yet (that we know of). So first, we want to reproduce other's findings in the data we have. Then, we want to reproduce those findings on our Monte Carlo Geant4 simulation. After that, we want to implement dark sector particles in the Geant4 simulation and see if we can find it. Eventually, we want to take what we've learned from the MC to hunt for the dark sector particles in the real data. Of course, this is all easier said than done, as when working in a large experiment, you probably have to chase down 5 people to see what line of code was updated to break your analyzer. But certainly we are making progress, if not at least learning.</p>
+
+					<p>Working at CERN itself is interesting. Probably everyone who hasn't been is thinking that this is heaven on Earth for students like me. And I thought that for a while too. I'm not sure if don't, but its perhaps not what you expect. For one, CERN is rather isolated. To get off of campus and see real people again is at least a half hour tram ride away. The buildings are not high-tech and futuristic, but rather the same dumpy offices that were built 60 years ago. Unfortunately, you don't wake up everyday nearly jumping with excitement to sprint to the office and work for 16 hours straight.</p>
+
+					<p>What we do here is physics. Everyone who has worked in physics for a considerable amount of time knows it's not the kind of fun that pays out immediately. In fact, I would rarely say that physics research is fun. It's work. It's hard. It's far more often disappointing than illuminating. You can spend easily a day or two getting crazy numbers because of some line of code you accidentally deleted. Your experiment can go down 10 minutes into your 12 hour shift because of something you cannot control or fix. You can spend months of your life formulating papers on the latest possible particle only to find that it was really just a fluctuation that's already disappeared. Physics is very rarely amusement park fun.</p>
+
+					<p>The feeling I get here is much more subtle than excitement. More than anything I would call it motivational. There is an energy about this place that makes you want to be great, and that can mean feeling exhausted, frustrated, and stuck. Those who haven't done physics, or research in general, probably don't quite understand what I mean. I suppose the best I can say is this is a labor of love. Physics don't work as hard as they do at CERN because it is always fun, always rewarding, always exciting; they do it because they literally can't imagine doing anything else.</p>
+
+					</div>
+
+					<button id="readmore_2" class="read-more">Read more</button>
 				</div>
-				<div class="foot-post">
+				<!-- <div class="foot-post">
 					<div class="units-row">
 					    <div class="unit-100">
 					    	<strong>Tags:</strong>
@@ -133,22 +168,25 @@ Ultimately we want to be able to find the momentum spread and production point o
 					    	<a href="#">3</a>
 					    </div>
 					</div>
-				</div>
+				</div> -->
 			</div>
 			<!-- /post -->
 
 			<!-- Post -->
 			<div class="post">
 				<!-- Heading -->
-				<a href="#"><h1>Moon’s orbit around the Earth </h1></a>
+				<a href="#"><h1>Greetings from CERN</h1></a>
 				<hr>
 				<div class="in-content">
-					<p>
-						Tilted to the orbit of the Earth around the Sun – and so most of the time, the moon will pass above or below Saturn in the sky, and no occultation will occur. It is only when Saturn lies near the point that the moon’s orbit crosses the “plane of the ecliptic” that occultations can happen.
-					</p>
-					<a class="read-more" href="#">Read more</a>
+
+					<p>This summer I am taking a break, not from dark photons, but from Cornell. I am spending the next two months working on the NA-62 experiment data from 2015 for a different dark photon search. At Cornell (MMAPS), we are looking for this dark matter candidate via a missing mass experiment. Here, they are instead looking for it via a dilepton decay model. I'll honestly be doing rather similar work, lots of Geant4 modeling and ROOT analysis for the backgrounds.</p>
+
+					<p>All in all, not bad, if I say so myself.</p>
+
+					<p>Unfortunately, MMAPS again failed to receive any funding from the NSF. We are potentially considering a collaboration with some folks at Frascati, so the dream isn't over yet!</p>
+
 				</div>
-				<div class="foot-post">
+				<!-- <div class="foot-post">
 					<div class="units-row">
 					    <div class="unit-100">
 					    	<strong>Tags:</strong>
@@ -161,7 +199,7 @@ Ultimately we want to be able to find the momentum spread and production point o
 					    	<a href="#">221</a>
 					    </div>
 					</div>
-				</div>
+				</div> -->
 			</div>
 			<!-- /post -->
 		</div>
@@ -175,15 +213,15 @@ Ultimately we want to be able to find the momentum spread and production point o
 			    </div>
 			    <div class="unit-50">
 					<ul class="social list-flat right">
-						<li><a href="mailto:afnizarhilmi@gmail.com"><i class="fa fa-send"></i></a></li>
-						<li><a href="http://twitter.com/flamekaizar"><i class="fa fa-twitter"></i></a></li>
-						<li><a href="http://dribbble.com/flamekaizar"><i class="fa fa-dribbble"></i></a></li>
-						<li><a href="http://behance.com/flamekaizar"><i class="fa fa-behance"></i></a></li>
+						<li><a href="mailto:ccesarotti@g.harvard.edu"><i class="fa fa-send"></i></a></li>
+						<li><a href="https://twitter.com/cCesarotti"><i class="fa fa-twitter"></i></a></li>
+						<li><a href="https://www.facebook.com/cari.cesarotti"><i class="fa fa-facebook"></i></a></li>
+						<li><a href="https://www.linkedin.com/in/cari-cesarotti-2a4405a2"><i class="fa fa-linkedin"></i></a></li>
 					</ul>
 			    </div>
 			</div>
 			<p class="text-centered foot-cp">
-	    		<a href="#">handcrafted by @flamekaizar</a>
+	    		<a href="#">Cari Cesarotti - Last updated June 2017</a>
 	    	</p>
 		</div>
 	</footer>
@@ -191,5 +229,7 @@ Ultimately we want to be able to find the momentum spread and production point o
 	<!-- Javascript -->
 	<script src="js/jquery.min.js"></script>
     <script src="js/kube.min.js"></script>
+    <script src="js/custom.js"></script>
+
 </body>
 </html>
